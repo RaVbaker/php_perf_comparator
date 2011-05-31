@@ -6,32 +6,21 @@ class Tester {
   
   private $_data = array();
   
-  private $_tests = array(
-    'eval' => 'php',
-    'unserialize' => 'phps',
-    'json_decode' => 'json',
-  );       
+  private $_tests = array();       
   
   private $_testsResults = array();
   
   function __construct($trys = 10) {
-    $this->_trys = $trys;
-    $this->_loadData();
-  }                        
-  
-  private function _loadData() {
-    $data = array();
-    
-    foreach ($this->_tests as $test) {
-      include_once "data_{$test}.php";
-    }                                 
-    
-    $this->setTestData($data);
+    $this->_trys = $trys;       
   }                       
   
   public function setTestData(array $data) {
     $this->_data = $data;
-  }                       
+  }                   
+  
+  public function setTests($tests) {
+    $this->_tests = $tests;
+  }    
   
   public function runTests() {
     foreach ($this->_tests as $function => $dataKey) {
