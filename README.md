@@ -6,11 +6,11 @@ Simple class for testing performance of functions.
 
 You can find in file test.php
 
-  $tester = new Tester(1000);
-  $tester->setTestData($data);
-  $tester->setTests($tests);
-  $tester->runTests();
-  $tester->printResults();
+    $tester = new Tester(1000);
+    $tester->setTestData($data);
+    $tester->setTests($tests);
+    $tester->runTests();
+    $tester->printResults(); 
   
 ## About:
 
